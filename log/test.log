@@ -1,0 +1,370 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  Rendered articles/index.html.erb (14.6ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered articles/_form.html.erb (31.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/articles" for 127.0.0.1 at 2013-03-16 17:26:12 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` 
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+  [1m[36m (67.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles/2
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` DESC LIMIT 1
+  [1m[36m (58.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles/3
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (59.5ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `articles` 
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles/4
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `articles` 
+  [1m[36m (54.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"invalid value"}}
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"invalid value"}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by ArticlesController#new as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 5 LIMIT 1
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (50.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` 
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (48.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}, "id"=>"7"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 7 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles/7
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (58.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}, "id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles/8
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (48.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}, "id"=>"9"}
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (57.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"invalid value"}, "id"=>"10"}
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 10 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 1.1ms)
+  [1m[36m (49.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"invalid value"}, "id"=>"11"}
+  [1m[35mArticle Load (0.3ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (57.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `articles` 
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `articles` WHERE `articles`.`id` = 12[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `articles` [0m
+  [1m[35m (46.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:12', NULL, 'MyString', '2013-03-16 11:56:12')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 13 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `articles` WHERE `articles`.`id` = 13[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles
+Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
+  [1m[36m (37.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered articles/_form.html.erb (3.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/articles" for 127.0.0.1 at 2013-03-16 17:26:35 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT `articles`.* FROM `articles` 
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 37ms (Views: 30.7ms | ActiveRecord: 2.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered articles/_form.html.erb (4.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by ArticlesController#new as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `articles` 
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `articles` WHERE `articles`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles` [0m
+  [1m[35m (73.8ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `articles` WHERE `articles`.`id` = 2[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+  [1m[36m (68.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 3 LIMIT 1
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (64.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` 
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (69.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles` [0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles/5
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `articles` [0m
+  [1m[35m (59.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles/6
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT `articles`.* FROM `articles` ORDER BY `articles`.`id` DESC LIMIT 1[0m
+  [1m[35m (64.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles/7
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+  [1m[36m (62.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"invalid value"}}
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"invalid value"}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}, "id"=>"8"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 8 LIMIT 1
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (60.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}, "id"=>"9"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 9 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles/9
+Completed 302 Found in 25ms (ActiveRecord: 0.6ms)
+  [1m[36m (69.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"MyString"}, "id"=>"10"}
+  [1m[35mArticle Load (0.4ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 10 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/articles/10
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+  [1m[36m (49.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"invalid value"}, "id"=>"11"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 11 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[36m (54.9ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"title"=>"invalid value"}, "id"=>"12"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 12 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (58.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `articles` (`created_at`, `descrption`, `title`, `updated_at`) VALUES ('2013-03-16 11:56:36', NULL, 'MyString', '2013-03-16 11:56:36')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 13 LIMIT 1
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (48.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  Rendered articles/_form.html.erb (1.6ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
